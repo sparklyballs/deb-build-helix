@@ -26,7 +26,7 @@ tar -xvf xbmc-14.0-Helix.tar.gz && \
 rm -rf xbmc-14.0-Helix.tar.gz && \
 cd /root && \
 mv src /xbmc && \
-cd /xbmc
+cd /xbmc && \
 
 # Configure and make
 
