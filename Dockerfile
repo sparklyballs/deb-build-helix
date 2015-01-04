@@ -28,7 +28,7 @@ apt-get install autopoint bison ccache cmake curl cvs default-jre fp-compiler ga
 
 
 RUN cd /root/src  && \
-tar -xvf 14.0-Helix.tar.gz && \
+tar -xvf xbmc-14.0-Helix.tar.gz && \
 
 # Configure, make, clean.
 ./bootstrap && \
