@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp /xbmc/*.deb /root/debout/
+cp /root/src/*.deb /root/debout/
