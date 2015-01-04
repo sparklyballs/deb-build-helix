@@ -70,7 +70,7 @@ tar -xvf xbmc-14.0-Helix.tar.gz && \
 make
 
 # run checkinstall to create .deb file
-RUN cd xbmc && \
+RUN cd /root/src && \
 checkinstall -y --fstrans=no --install=yes --pkgname=sparkly-kodi-headless --pkgversion="`date +%Y%m%d`.`git rev-parse --short HEAD`"
 
 # startup file to output deb 
