@@ -23,6 +23,10 @@ apt-get install autopoint bison ccache cmake curl cvs default-jre fp-compiler ga
 
 RUN cd /root/src  && \
 tar -xvf xbmc-14.0-Helix.tar.gz && \
+rm -rf xbmc-14.0-Helix.tar.gz && \
+cd /root && \
+mv src /xbmc && \
+cd /xbmc
 
 # Configure and make
 
@@ -70,7 +74,7 @@ tar -xvf xbmc-14.0-Helix.tar.gz && \
 make
 
 # run checkinstall to create .deb file
-RUN cd /root/src && \
+RUN cd /xbmc && \
 checkinstall -y --fstrans=no --install=yes --pkgname=sparkly-kodi-headless --pkgversion="`date +%Y%m%d`.`git rev-parse --short HEAD`"
 
 # startup file to output deb 
